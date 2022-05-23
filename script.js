@@ -79,7 +79,7 @@ function login() {
         password: inputPassword.value,
     };
 
-    fetch('http://localhost:5000/api/login', {
+    fetch('https://newsletterrebeckalarssons.herokuapp.com/api/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ function loggedIn(id) {
     inputSection.innerHTML = "";
     postSection.innerHTML = "";
 
-    fetch(`http://localhost:5000/api/login/${id}`)
+    fetch(`https://newsletterrebeckalarssons.herokuapp.com/api/login/${id}`)
         .then(response => response.json())
         .then(data => {
 
@@ -147,7 +147,7 @@ function changeSub(data) {
         newsletter: !data.newsletter
     };
 
-    fetch('http://localhost:5000/api/change', {
+    fetch('https://newsletterrebeckalarssons.herokuapp.com/api/change', {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -206,7 +206,7 @@ function createUser() {
         newsletter: selectedNews
     };
 
-    fetch('http://localhost:5000/api/create', {
+    fetch('https://newsletterrebeckalarssons.herokuapp.com/api/create', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
